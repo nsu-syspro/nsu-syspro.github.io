@@ -1,0 +1,4 @@
+# Override "remote_theme" with invalid theme
+# to force using "theme" instead
+remote_theme: none
+theme: nsu-syspro-minima

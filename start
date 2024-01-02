@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+if [ -n "$1" ]; then
+  export BUNDLE_LOCAL__NSU___SYSPRO___MINIMA="$1"
+  # Set local config with overrides.
+  # Note that the comma is important here!
+  LOCAL_CONFIG=",_config_local.yml"
+fi
+
+bundle update
+bundle exec jekyll serve --host=0.0.0.0 --config "_config.yml$LOCAL_CONFIG"
