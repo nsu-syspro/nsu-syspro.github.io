@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Команда
-permalink: /team/
+title: Преподаватели
+permalink: /teachers/
 ---
 
 TODO
