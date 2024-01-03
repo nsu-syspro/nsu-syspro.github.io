@@ -39,6 +39,17 @@ remote_theme: nsu-syspro/minima
 header_pages:
   - about.md
 
+collections:
+  courses:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "courses"
+    values:
+      layout: "course"
+
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
 

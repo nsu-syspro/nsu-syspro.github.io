@@ -1,0 +1,28 @@
+<!-- Source: https://github.com/abhinavs/moonwalk -->
+<ul class="horizontal-list">
+  {% for item in include.collection %}
+
+    <li class="card">
+      <a href="{{ item.url }}">
+        <span class="header">
+          {{ item.card_title }}
+
+          {% if item.highlight %}
+            <mark>{{ item.highlight }}</mark>
+          {% endif %}
+
+        </span>
+
+        <hr />
+
+        {% if item.title != false %}
+        <p class="body">
+          {{ item.title }}
+        </p>
+        {% endif %}
+      </a>
+    </li>
+
+  {% endfor %}
+</ul>
+
