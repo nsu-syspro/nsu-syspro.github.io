@@ -3,4 +3,21 @@ layout: page
 ---
 <p> {{ page.year }} курс, {{ page.semester }} семестр </p>
 
+{% if page.teachers %}
+
+  {% if page.teachers.size > 1 %}
+    <h2>Преподаватели</h2>
+  {% else %}
+    <h2>Преподаватель</h2>
+  {% endif %}
+
+  {% for teacher in page.teachers %}
+    {% assign matching_teachers = site.teachers | where: "slug", teacher %}
+    {% assign teachers = teachers | concat: matching_teachers %}
+  {% endfor %}
+  {% include teacher_list.html collection=teachers %}
+{% endif %}
+
+
+
 {{ content }}

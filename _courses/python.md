@@ -3,5 +3,7 @@ title: Наукоемкое программирование на языке Pyt
 card_title: Python
 semester: 1
 year: 1
+teachers:
+  - dbg
 ---
 

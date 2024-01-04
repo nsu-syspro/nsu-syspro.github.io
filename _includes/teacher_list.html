@@ -1,0 +1,37 @@
+<!-- Source: https://github.com/abhinavs/moonwalk -->
+<ul class="horizontal-list">
+  {% for item in include.collection %}
+
+    <li class="card">
+        <span class="header">
+          {{ item.name }}
+
+        </span>
+
+        <hr />
+
+        {% if include.show_courses %}
+          <ul class="post-list">
+          {% assign courses = site.courses | sort: "semester" %}
+          {%- for course in courses -%}
+            {% for teacher in course.teachers %}
+              {% if teacher == item.slug %}
+                <li>
+                  <a href="{{ course.url }}">{{ course.card_title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          {%- endfor -%}
+          </ul>
+        {% endif %}
+
+        <ul class="social-media-list">
+        {%- for entry in item.social_links -%}
+          {%- include social-item.html item = entry -%}
+        {%- endfor -%}
+        </ul>
+    </li>
+
+  {% endfor %}
+</ul>
+
