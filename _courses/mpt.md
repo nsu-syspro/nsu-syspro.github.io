@@ -3,6 +3,7 @@ title: Инструментарий современного программи�
 card_title: ИСП
 semester: 1
 year: 1
+lang: ru
 teachers:
   - cypok
   - liontiger

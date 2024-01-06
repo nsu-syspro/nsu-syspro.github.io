@@ -1,0 +1,12 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+
+.course-lang {
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    color: $table-text-color;
+    background-color: $table-zebra-color;
+    font-size: small;
+    display: inline-block;
+}

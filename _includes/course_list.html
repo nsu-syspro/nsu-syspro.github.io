@@ -7,10 +7,18 @@
         <span class="header">
           {{ item.card_title }}
 
-          {% if item.highlight %}
-            <mark>{{ item.highlight }}</mark>
+          {% if item.lang %}
+            <span class="course-lang">
+              {% case item.lang %}
+                {% when "ru" %}
+                  RU
+                {% when "en" %}
+                  EN
+                {% else %}
+                  ??
+              {% endcase %}
+            </span>
           {% endif %}
-
         </span>
 
         <hr />

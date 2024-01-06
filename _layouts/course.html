@@ -1,7 +1,20 @@
 ---
 layout: page
 ---
-<p> {{ page.year }} курс, {{ page.semester }} семестр </p>
+<p> {{ page.year }} курс, {{ page.semester }} семестр
+{% if page.lang %}
+  </br>
+  Язык: 
+  {% case page.lang %}
+    {% when "ru" %}
+      русский
+    {% when "en" %}
+      английский
+    {% else%}
+      ???
+  {% endcase %}
+{% endif %}
+</p>
 
 {% if page.teachers %}
 
